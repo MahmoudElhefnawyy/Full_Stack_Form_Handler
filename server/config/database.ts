@@ -19,8 +19,7 @@ class DatabaseConfig {
       return this.db;
     }
 
-    const connectionString = process.env.MONGODB_URI || 
-      "mongodb+srv://mahmouddevy:qpgks4URWJsNEqkX@cluster0.jtrckpp.mongodb.net/website_generator?retryWrites=true&w=majority&appName=Cluster0";
+    const connectionString = process.env.MONGODB_URI;
 
     this.client = new MongoClient(connectionString, {
       serverSelectionTimeoutMS: 10000,
